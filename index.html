@@ -7,13 +7,14 @@
     <title>retail-dashboard-app</title>
 </head>
 <body>
-    <header>
-        <ul class="header-list">
-            <li class="list-object"><a href="#">Menu</a></li>
-            <li class="list-object"><a href="#">Tims for good</a></li>
-            <li class="list-object"><a href="#">Tims Catering</a></li>
-            <li class="list-object"><a href="#">TimsShop</a></li>
-            <li class="list-object">
+    <header class="navbar">
+        <div class="nav-left">
+            <a href="#" class="menu-link">Menu</a>
+            <a href="#">Tims for Good</a>
+            <a href="#">Tims Catering</a>
+            <a href="#">TimShop</a>
+
+            <div class="dropdown">
                 <a href="#">More ▾</a>
                 <div class="dropdown-menu">
                     <a href="#">Tims Rewards</a>
@@ -21,33 +22,37 @@
                     <a href="#">TimShop</a>
                     <a href="#">Tims Gift Card</a>
                     <a href="#">Franchising</a>
-                    <br>
+                    <hr>
                     <a href="#">Tim Hortons Help Center</a>
                     <a href="#">Store Location</a>
                     <a href="#">Feedback Survey</a>
-                    <br>
-                    <a href="#">Our Coffe Story</a>
+                    <hr>
+                    <a href="#">Our Coffy Story</a>
                     <a href="#">Nutrition and Allergens</a>
-                    <br>
+                    <hr>
                     <a href="#">About Us</a>
                     <a href="#">News</a>
-                    <a href="#">Carres</a>
                     <a href="#">Privacy Policy</a>
                     <a href="#">Delivery Terms</a>
-                    <a href="#">Terms of service</a>
-                    <a href="#">Movile Ordering and Payment</a>
-                    <a href="#">Account Managment</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Mobile Ordering and Payment</a>
+                    <a href="#">Account Management</a>
                     <a href="#">Attributions</a>
                 </div>
-            </li>
-        </ul>
-        <img class="main-logo" src="./asset/tim-hortons-logo.png" alt="Tim Hortons Logo">
-        <div class="bag">
-            <button class="sing-in">Sing In</button>
-            <button class="sing-in-img">
-                <img src="./asset/products-bag.png" alt="Bag">
-                <p class="bag-counter">0</p>
-            </button>
+            </div>
+        </div>
+
+        <div class="nav-center">
+            <img src="./asset/tim-hortons-logo.png" alt="Tim Hortons">
+        </div>
+
+        <div class="nav-right">
+            <button class="sign-in">Sign In</button>
+            <div class="cart">
+                <button class="cart">
+                    <img src="./asset/products-bag.png" alt="bag"><span>0</span>
+                </button>
+            </div>
         </div>
     </header>
     <script src="./script.js"></script>
