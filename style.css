@@ -1,5 +1,128 @@
+:root{
+    --timhortons-color: #c8102e
+}
+
 *{
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+}
+
+body {
+    background-color: #fff;
+}
+
+.navbar {
+    height: 4.875rem;
+    width: 100%;
+    background-color: var(--timhortons-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    font-family: sans-serif;
+    font-size: 1.10rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-left a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-link,
+.menu-link :hover {
+    border-bottom: 2px solid white;
+    font-weight: 600;
+}
+
+.menu-link :hover
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 380px;
+    height: 37.5rem;
+    background-color: white;
+    color: #333;
+    min-width: 220px;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-radius: 5%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.nav-center img {
+    height: 65px;
+}
+
+/* RIGHT */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.sign-in {
+    background-color: white;
+    color: var(--timhortons-color);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cart {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--timhortons-color);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+}
+
+.cart :hover{
+    background-color: #87150d;
+    cursor: pointer;
+}
+
+.cart img{
+    height: 18px;
+    width: 18px;
 }
