@@ -10,6 +10,8 @@
     font-family: sans-serif;
 }
 
+/*header*/
+
 body {
     background-color: #fff;
 }
@@ -129,6 +131,8 @@ body {
     width: 1.125rem;
 }
 
+/*MAIN*/
+
 .menu {
   max-width: 1200px;
   margin: 60px auto;
@@ -170,6 +174,7 @@ body {
   text-decoration: none;
 }
 
+/*FOOTER*/
 
 .footer {
   background-color: #f2f2f2;
