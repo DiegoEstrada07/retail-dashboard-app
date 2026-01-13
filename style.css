@@ -1,6 +1,6 @@
 :root{
-    --timhortons-color: #c8102e;
-    --timhortons-typo:rgb(68, 15, 15);
+    --walmart-color: #0071ce;
+    --walmart-typo:rgb(15, 27, 68);
 }
 
 *{
@@ -21,7 +21,7 @@ body {
     top: 0rem;
     height: 4.875rem;
     width: 100%;
-    background-color: var(--timhortons-color);
+    background-color: var(--walmart-color);
     color: white;
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@ body {
 
 .sign-in {
     background-color: white;
-    color: var(--timhortons-color);
+    color: var(--walmart-color);
     border: none;
     padding: 8px 18px;
     border-radius: 20px;
@@ -111,7 +111,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background-color: var(--timhortons-color);
+    background-color: var(--walmart-color);
     color: white;
     padding: 10px 18px;
     border-radius: 30px;
@@ -123,7 +123,7 @@ body {
 }
 
 .cart :hover{
-    background-color: #87150d;
+    background-color: #0d1f87;
     cursor: pointer;
 }
 
@@ -133,97 +133,220 @@ body {
 }
 
 /*MAIN*/
-
-.menu {
-    max-width: 1200px;
-    margin: 60px auto;
-    text-align: center;
-    padding-top: 4.375rem;
+.walmart{
+    margin-left: 650px;
+    margin-top: 100px;
+    color: var(--walmart-typo);
+}
+/* GRID */
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 20px;
+  margin-top: 70px;
+  margin-bottom: 200px;
 }
 
-.menu h1 {
-    font-size: 3.125rem;
-    font-weight: 700;
-    margin-bottom: 3.75rem;
-    color: var(--timhortons-typo);
+/* CARD BASE */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #0a1f44;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.menu-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 100px ;
-    align-items: center;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.menu-item {
+/* SIZES */
+.card-small {
+  grid-column: span 1;
+}
+
+.card-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+/* COLORS */
+.blue { 
+    background: #bfe3f7;
+    background-image: url(./asset/main/electronic.png);
+    background-repeat: no-repeat;
+    background-position: 200px;
+    background-size: 200px;
+}
+.light-blue {
+    background: #e6f3fb;
+    background-image: url(./asset/main/cloth.png);
+    background-repeat: no-repeat;
+    background-position: 200px, 0px;
+    background-size: 500px;
+}
+.green {
+    background: #b7c7a3;
+    background-image: url(./asset/main/home.png);
+    background-repeat: no-repeat;
+    background-position: 100px;
+    background-size: 300px;
+}
+.beige {
+    background: #e7e2c9;
+    background-image: url(./asset/main/personal-care.png);
+    background-repeat: no-repeat;
+    background-position: 200px;
+    background-size: 250px;
+}
+
+.red {
+    background: #8c0f0f;
+    color: white;
+    background-image: url(./asset/main/chinise-year.png);
+    background-repeat: no-repeat;
+    background-position: 200px;
+    background-size: 200px;
+}
+
+/* TEXT */
+.card h2 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.card h3 {
+  font-size: 22px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* LINKS & BUTTONS */
+.link {
+  margin-top: auto;
+  font-weight: 600;
+  text-decoration: underline;
+}
+.promo-grid a button {
+  align-self: flex-start;
+  margin-top: 20px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid #333;
+  background: white;
   cursor: pointer;
 }
 
-.menu-item img {
-    width: 100%;
-    max-width: 16.25rem;
-    height: auto;
-    margin-bottom: 1.25rem;
-    cursor: pointer;
+/*Products*/
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
 }
 
-.menu-item a {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: var(--timhortons-typo);
-    cursor: pointer;
-    text-decoration: none;
+.card-product {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.menu-btn{
-    margin-top: 100px;
-    margin-bottom: -100px;
-    margin-left: 74px;
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 18px;
-    color: #000;
-    text-decoration: none;
-    border-radius: 999px;
-    font-size: 15px;
-    font-weight: 600;
-    transition: 0.3s;
+.card-header h2 {
+  font-size: 20px;
+  margin: 0;
 }
 
-.back-link:hover {
-    background-color: #d5d5d5;
+.card-header a {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #000;
 }
 
-.back-link:active {
-    color: #fff;
-    background-color: black;
-
+.subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
 }
 
-.arrow {
-    font-size: 20px;
-    line-height: 1;
+.card-product img {
+  width: 100%;
+  max-width: 260px;
+  display: block;
+  margin: 0 auto 20px;
 }
 
-
-.price{
-    color: var(--timhortons-color);
-    font-weight: 20;
-    font-size: 15px;
+.product-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.cal{
-    color: rgb(37, 37, 37);
-    font-weight: 20;
-    font-size: 15px;
+.product {
+  text-align: center;
+  max-width: 220px;
 }
 
-/*Show product page*/
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
 
+.price.green {
+  color: #0a8a0a;
+}
+
+.old-price {
+  font-size: 14px;
+  color: #777;
+  text-decoration: line-through;
+  margin-left: 6px;
+}
+
+.description {
+  font-size: 14px;
+  color: #333;
+}
+
+.btn-primary {
+  background: #0071e3;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: #0071e3;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn-primary:hover,
+.btn-outline:hover {
+  background: #005bb5;
+}
+
+/*
 .product{
     display: flex;
     justify-content: center;
@@ -271,90 +394,124 @@ body {
 .add-btn:hover {
     background: #a50d25;
 }
+*/
 
 /*FOOTER*/
-
 .footer {
-    background-color: #f2f2f2;
-    padding: 60px 80px;
-    color: #2b2b2b;
+  background-color: #0046be;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
 }
 
 .footer a {
-    display: block;
-    text-decoration: none;
-    color: var(--timhortons-typo);
-    margin-top: 6px;
-    font-size: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .footer a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.footer h4 {
-    font-size: 18px;
-    margin-bottom: 6px;
+.footer-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px 60px;
+  flex-wrap: wrap;
 }
 
-.footer p {
-    font-size: 15px;
-    margin-bottom: 4px;
+.footer-columns {
+  display: flex;
+  gap: 60px;
+  flex: 2;
+  flex-wrap: wrap;
 }
 
-.footer-top,
+.footer-column h4 {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column .mt {
+  margin-top: 24px;
+}
+
+.footer-subscribe {
+  background-color: #eaf2ff;
+  color: #000;
+  padding: 24px;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-subscribe h3 {
+  margin-top: 0;
+}
+
+.footer-subscribe p {
+  font-size: 14px;
+}
+
+.footer-subscribe label {
+  display: block;
+  margin: 16px 0 6px;
+  font-size: 14px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.subscribe-form button {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: 1px solid #000;
+  background: #fff;
+  cursor: pointer;
+}
+
+.footer-subscribe small {
+  display: block;
+  margin-top: 14px;
+  font-size: 12px;
+}
+
+.footer-subscribe a {
+  color: #0046be;
+}
+
 .footer-bottom {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding: 16px 60px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.footer-top {
-    margin-bottom: 40px;
+.footer-links a {
+  margin-left: 16px;
 }
-
-.footer hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 40px 0;
-}
-
-.social h4 {
-    margin-bottom: 12px;
-}
-
-.social-icons {
-    display: flex;
-    gap: 16px;
-}
-
-.social-icons a {
-    color: #2b2b2b;
-    font-size: 18px;
-}
-
-.social-icons a img {
-    width: 25px;
-    height: 25px;
-}
-
-.social-icons a:hover {
-    color: #b40000;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-    .footer {
-        padding: 40px;
-    }
-
-    .footer-top,
-    .footer-bottom {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-}
-
 /* 404*/
 
 .unfound-main {
@@ -377,39 +534,12 @@ body {
     height: 140px;
     margin: 0 auto 25px;
     border-radius: 50%;
-    background: repeating-linear-gradient(
-        90deg,
-        #c8102e 0px,
-        #c8102e 8px,
-        #ffffff 8px,
-        #ffffff 16px
-    );
     position: relative;
-    border: 5px solid #3b1f1f;
 }
 
-.donut .hole {
-    width: 45px;
-    height: 45px;
-    background: #ffffff;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 4px solid #3b1f1f;
+.donut img{
+    height: 150px;
 }
-
-.donut .bite {
-    width: 50px;
-    height: 50px;
-    background: #ffffff;
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
-    right: 15px;
-}
-
 /* Text */
 .error-container h1 {
     font-size: 28px;
@@ -454,14 +584,14 @@ body {
 
 .btn.outline {
     background: transparent;
-    color: var(--timhortons-color);
-    border: 2px solid var(--timhortons-color);
+    color: var(--walmart-color);
+    border: 2px solid var(--walmart-color);
     transition: 0.3s;
     font-weight: bold;
 }
 
 .btn.outline:hover {
-    background: rgb(254, 215, 221);
+    background: rgba(0, 40, 133, 0.119);
 }
 
 /* Responsive */
