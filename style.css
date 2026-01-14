@@ -349,10 +349,81 @@ h1{
   background: #005bb5;
 }
 
+/*cart zone*/
 .cart-zone{
-  height: 62.5rem;
+  height: 42.875rem;
   width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  display: flex;
+  margin-bottom: 1.25rem;
+}
 
+#cart{
+  display: inline-block;
+  display: flexbox;
+  flex-direction: row;
+  height: 300px;
+  
+}
+
+#cart p{
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--walmart-typo);
+}
+
+#cart img{
+  height: 280px;
+  float: left;
+}
+
+#cart button{
+  height: 3.75rem;
+  width: 3.85rem;
+  background-color: rgba(255, 0, 0, 0.542);
+  border-radius: 100%;
+  border-color: rgba(255, 0, 0, 0.542);
+  background-image: url(./asset/svg/basura.svg);
+  background-size: 40px;
+  background-position: 10px;
+  background-repeat: no-repeat;
+}
+
+.cart-area{
+  width: 100%;
+  padding: 1.875rem;
+}
+
+.total{
+  background-color: var(--walmart-color);
+  font-weight: bold;
+  color: var(--walmart-typo);
+  font-size: 40px;
+  border-radius: 100px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  padding-left: 20px;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.carrito-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.carrito-item p {
+  margin: 0;
+  padding: 0 10px;
+}
+.total {
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 /*FOOTER*/
