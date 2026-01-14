@@ -1,66 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./asset/svg/walmart-spark.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>retail-dashboard-app</title>
+    <title>Products</title>
 </head>
 <body>
     <header class="navbar">
         <div class="nav-center">
-            <img src="./asset/svg/walmart-spark.png" alt="Tim Hortons">
+            <a href="../index.html">
+                <img src="../asset/svg/walmart-spark.png" alt="Tim Hortons">
+            </a>
         </div>
 
         <div class="nav-right">
-            <a href="./pages/stats.html">
+            <a href="./stats.html">
                 <button class="sign-in">Stadistics</button>
             </a>
-            <a href="./pages/cart.html">
             <div class="cart">
-                <button class="cart">
-                    <img src="./asset/header/products-bag.png" alt="bag"><span></span>
-                </button>
+                <a href="./cart.html">
+                    <button class="cart">
+                        <img src="../asset/header/products-bag.png" alt="bag"><span></span>
+                    </button>
+                </a>
             </div>
-            </a>
         </div>
     </header>
-    <main>  
-        <h1 class="walmart">Walmart</h1>
-        <div class="promo-grid">
-
-        <a href="./pages/electronics.html" class="card card-small blue">
-            <h3>Electronics</h3>
-            <p></p>
-            <span class="link">Shop</span>
-        </a>
-
-        <a href="./pages/clothing.html" class="card card-large light-blue">
-            <h2>Clothing</h2>
-            <button>Learn more</button>
-        </a>
-
-        <a href="./pages/home.html" class="card card-small green">
-            <h3>Home</h3>
-            <p></p>
-            <span class="link">Shop</span>
-        </a>
-
-        <a href="./pages/personal-care.html" class="card card-small beige">
-            <h3>Personal Care</h3>
-            <p></p>
-            <span class="link">Shop all</span>
-        </a>
-
-        <a href="./pages/lunar-new-year.html" class="card card-small red">
-            <h3>Lunar New Year</h3>
-            <p></p>
-            <span class="link">Shop all</span>
-        </a>
-
+    <main>
+        <div class="product">
+            <div class="product-card">
+                <img class="product-image" id="imagen" src="" alt="Imagen">
+                <h1 class="product-title" id="texto1"></h1>
+                <br>    
+                <p class="product-meta" id="texto2"></p>
+                <button class="add-btn" id="boton"></button>
+                </div>
+            </div>
         </div>
-
     </main>
     <footer class="footer">
         <div class="footer-container">
@@ -140,6 +116,6 @@
             </div>
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="../script.js"></script>
 </body>
 </html>
