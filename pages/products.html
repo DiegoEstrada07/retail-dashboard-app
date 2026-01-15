@@ -75,28 +75,34 @@
                 <br>    
                 <p class="product-meta" id="texto2"></p>
                 <button class="add-btn" id="boton"></button>
+                </div>
             </div>
-        </div>
             
         <div class="rating-box">
-            <h2>Rate this product</h2>
+            
+<form id="reviewForm">
+  <input type="hidden" id="productId" value="123" />
 
-            <!-- Stars -->
-            <div class="stars" id="stars">
-                <span data-value="1">★</span>
-                <span data-value="2">★</span>
-                <span data-value="3">★</span>
-                <span data-value="4">★</span>
-                <span data-value="5">★</span>
-            </div>
+  <label>Calificación:</label>
+  <select id="rating">
+    <option value="1">⭐</option>
+    <option value="2">⭐⭐</option>
+    <option value="3">⭐⭐⭐</option>
+    <option value="4">⭐⭐⭐⭐</option>
+    <option value="5">⭐⭐⭐⭐⭐</option>
+  </select>
 
-            <!-- Comment -->
-            <textarea id="comment" placeholder="Write your review..."></textarea>
+  <br /><br />
 
-            <!-- Button -->
-            <button id="submitRating">Submit rating</button>
+  <textarea id="comment" placeholder="Escribe tu reseña"></textarea>
 
-            <p id="status"></p>
+  <br /><br />
+
+  <button type="submit">Publicar reseña</button>
+</form>
+
+<p id="message"></p>
+            
         </div>
     </main>
     <footer class="footer">

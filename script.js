@@ -51,8 +51,8 @@ if (existingProduct) {
             localStorage.setItem('cart', JSON.stringify(cart));
 
             alert(name + " has been added to your cart");
-}
- function displayCart() {
+        }
+            function displayCart() {
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             let cartDiv = document.getElementById('cart');
             let total = 0;
@@ -78,7 +78,6 @@ if (existingProduct) {
                     total += item.price * item.quantity;
                 });
 
-                // Display the total
                 document.getElementById('total').textContent = "Total: $" + total;
             }
         }
@@ -217,51 +216,3 @@ else {
 }
 
 //Ratings
-
-let selectedRating = 0;
-const stars = document.querySelectorAll("#stars span");
-const statusText = document.getElementById("status");
-
-stars.forEach(star => {
-    star.addEventListener("click", () => {
-        selectedRating = star.getAttribute("data-value");
-
-        stars.forEach(s => s.classList.remove("active"));
-        for (let i = 0; i < selectedRating; i++) {
-            stars[i].classList.add("active");
-        }
-    });
-});
-
-document.getElementById("submitRating").addEventListener("click", () => {
-    const comment = document.getElementById("comment").value;
-
-    if (selectedRating === 0) {
-        statusText.textContent = "Please select a rating.";
-        return;
-    }
-
-    const ratingData = {
-        productId: "product_123",
-        rating: Number(selectedRating),
-        comment: comment,
-        date: new Date().toISOString()
-    };
-
-    fetch("http://localhost:3000/api/ratings", {
-        method: "POST",
-        headers: {
-            "Content-Type": "products/json"
-        },
-        body: JSON.stringify(ratingData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        statusText.textContent = "Thank you for your rating!";
-        console.log(data);
-    })
-    .catch(error => {
-        statusText.textContent = "Error sending the rating.";
-        console.error(error);
-    });
-});
